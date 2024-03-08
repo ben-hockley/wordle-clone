@@ -1,10 +1,13 @@
-word = "PLATE" //must be uppercase for wordle
+word = "PLANE" //must be in all caps
 
 var attempt = 1
 var letter = 1
 
 activeSquare = attempt + "-" + letter
 
+function generateWord(){
+
+}
 
 function checkAnswer(){
     guess = ""
