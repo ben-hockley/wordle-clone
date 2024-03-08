@@ -5,9 +5,6 @@ var letter = 1
 
 activeSquare = attempt + "-" + letter
 
-function generateWord(){
-
-}
 
 function checkAnswer(){
     guess = ""
@@ -55,10 +52,12 @@ document.addEventListener('keydown', function(e){
         document.getElementById(activeSquare).innerHTML = "" //clear square
     } else {
         keyPressed = e.key
+        if (keyPressed.toLowerCase() != keyPressed.toUpperCase()){ //checks that key pressed is a letter
         keyPressed = keyPressed.toUpperCase() //change input to upper case
         document.getElementById(activeSquare).innerHTML = keyPressed //add key pressed to current square
         //go to next square
         letter = letter + 1
-        activeSquare = attempt + "-" + letter
+        activeSquare = attempt + "-" + letter}
+        //if key pressed is not a letter then nothing happens
     }
 });
