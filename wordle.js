@@ -31,6 +31,9 @@ function checkAnswer(){
         }  
     }
     attempt = attempt + 1
+    if (attempt == 7){
+        alert("Game over, you lose :(")
+    }
     letter = 1
     activeSquare = attempt + "-" + letter
     } else {
