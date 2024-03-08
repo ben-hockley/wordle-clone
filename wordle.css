@@ -7,7 +7,7 @@ body{
     text-align: center;
 }
 .attempt{
-    width:80%;
+    width:400px;
     margin:10px auto 10px auto;
     height:60px;
     display:flex;
@@ -15,9 +15,9 @@ body{
 }
 .letter{
     height:100%;
-    width:15%;
+    width:60px;
     background-color: gray;
-    border-radius:2%;
+    border-radius:10%;
     text-align: center;
-    font-size: xx-large;
+    font-size: 60px;
 }
