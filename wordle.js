@@ -20,7 +20,6 @@ function checkAnswer(){
         attempt = 0 //end game
     }
     else if (guess.length == 5){
-    console.log(guess)
     for (j=1;j<6;j++){
         if (guess[j-1] == word[j-1]){
             document.getElementById(attempt + "-" + j).style.backgroundColor = 'green'
@@ -48,12 +47,10 @@ document.addEventListener('keydown', function(e){
     } else if (e.key == 'Backspace'){
         if (letter != 1){ //blocks user from going before first letter in an attempt
             letter = letter - 1
+            activeSquare = attempt + "-" + letter //move back
         }
-        activeSquare = attempt + "-" + letter //move back
         document.getElementById(activeSquare).innerHTML = "" //clear square
-        console.log(e.key)
     } else {
-        console.log(e.key)
         keyPressed = e.key
         keyPressed = keyPressed.toUpperCase() //change input to upper case
         document.getElementById(activeSquare).innerHTML = keyPressed //add key pressed to current square
