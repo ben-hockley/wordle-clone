@@ -17,6 +17,7 @@ function checkAnswer(){
             document.getElementById(attempt + "-" + k).style.backgroundColor = 'green'
             document.getElementById(attempt + "-" + k).style.color = 'white'
         }
+        attempt = 0 //end game
     }
     else if (guess.length == 5){
     console.log(guess)
@@ -40,11 +41,13 @@ function checkAnswer(){
 
 document.addEventListener('keydown', function(e){
     if (e.key == 'Enter'){
-        checkAnswer()
+        checkAnswer()  //calls checkanswer() function.
     } else if (e.key == 'Backspace'){
-        letter = letter - 1
-        activeSquare = attempt + "-" + letter
-        document.getElementById(activeSquare).innerHTML = ""
+        if (letter != 1){ //blocks user from going before first letter in an attempt
+            letter = letter - 1
+        }
+        activeSquare = attempt + "-" + letter //move back
+        document.getElementById(activeSquare).innerHTML = "" //clear square
         console.log(e.key)
     } else {
         console.log(e.key)
