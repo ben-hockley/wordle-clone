@@ -1,4 +1,4 @@
-word = "plane"
+word = "PLATE" //must be uppercase for wordle
 
 var attempt = 1
 var letter = 1
@@ -51,7 +51,10 @@ document.addEventListener('keydown', function(e){
         console.log(e.key)
     } else {
         console.log(e.key)
-        document.getElementById(activeSquare).innerHTML = e.key
+        keyPressed = e.key
+        keyPressed = keyPressed.toUpperCase() //change input to upper case
+        document.getElementById(activeSquare).innerHTML = keyPressed //add key pressed to current square
+        //go to next square
         letter = letter + 1
         activeSquare = attempt + "-" + letter
     }
